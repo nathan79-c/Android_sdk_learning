@@ -43,4 +43,9 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="title_activity_second">SecondActivity</string>
+
+
+        <string name="source_url">https://services.google.com/fh/files/misc/qq8.jpeg</string>
+        <string name="target_url">https://services.google.com/fh/files/misc/qq2.jpeg</string>
+
 </resources>
