@@ -54,42 +54,14 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Column(
-                        verticalArrangement = Arrangement.SpaceAround,
-                        modifier = Modifier.padding(48.dp)
-                    ) {
-                        DragImage(url = getString(R.string.source_url))
-                        DropTargetImage(url = getString(R.string.target_url))
-                    }
+
                 }
             }
         }
     }
 }
 
-@Composable
-fun MainActivityScreen(onTasksSent: (String) -> Unit) {
-    var tasks by remember { mutableStateOf("") }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        OutlinedTextField(
-            value = tasks,
-            onValueChange = { tasks = it },
-            label = { Text("Entrez les tâches (séparées par des virgules)") },
-            modifier = Modifier.fillMaxWidth()
-        )
-        Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { onTasksSent(tasks) }) {
-            Text("Envoyer les tâches pour validation")
-        }
-    }
-}
 @OptIn(ExperimentalGlideComposeApi::class, ExperimentalFoundationApi::class)
 @Composable
 fun DragImage(url: String) {
